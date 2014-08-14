@@ -1,27 +1,10 @@
-##
-# name:      Module::Install::RequiresList
-# abstract:  Report prerequisite modules and version numbers
-# author:    Ingy döt Net <ingy@ingy.net>
-# license:   perl
-# copyright: 2011
-# see:
-# - Module::Install
-
-use 5.008003;
+use strict; use warnings;
 package Module::Install::RequiresList;
-use strict;
+our $VERSION = '0.11';
+
 use base 'Module::Install::Base';
 
-our $VERSION = '0.10';
 our $AUTHOR_ONLY = 1;
-
-my $requires = '
-use IO::All 0.41;
-use CPAN::Meta::YAML 0.003 ();
-# use JSON 2.53 ();
-# use Template::Toolkit::Simple 0.13 ();
-1;
-';
 
 sub requires_list {
     my ($self) = @_;
@@ -75,27 +58,3 @@ sub _cpan_version {
 }
 
 1;
-
-=head1 SYNOPSIS
-
-In your Makefile.PL:
-
-    use inc::Module::Install;
-    ...
-    requires_list;
-    ...
-
-From the command line:
-
-    > perl Makefile.PL
-    > make requires-list
-
-=head1 DESCRIPTION
-
-This module adds a target to your Makefile for listing the modules required.
-
-The report is broken into sections: Required, Recommended, Build Requires, and
-Author Requires.
-
-For each module listed, the report prints 3 versions: the version you are
-requesting, your installed version and the CPAN version.
