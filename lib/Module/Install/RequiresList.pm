@@ -1,6 +1,6 @@
 use strict; use warnings;
 package Module::Install::RequiresList;
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 
 use base 'Module::Install::Base';
 

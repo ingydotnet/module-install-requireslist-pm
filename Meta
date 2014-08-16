@@ -1,19 +1,25 @@
-=meta: 0.0.1
+=meta: 0.0.2
 
 name: Module-Install-RequiresList
-version: 0.13
+version: 0.14
 abstract: Report prerequisite modules and version numbers
 homepage: https://metacpan.org/release/Module-Install-RequiresList
-
+language: perl
 license: perl
-copyright: 2011-2014. Ingy döt Net.
+copyright: 2011-2014
+
 author:
   name: Ingy döt Net
   email: ingy@cpan.org
+  homepage: http://ingy.net
   github: ingydotnet
   twitter: ingydotnet
   freenode: ingy
-  homepage: http://ingy.net
+
+devel:
+  git: https://github.com/ingydotnet/module-install-requireslist-pm
+  bug: https://github.com/ingydotnet/module-install-requireslist-pm/issues
+  irc: irc.freenode.net#pkg
 
 requires:
   perl: 5.8.1
@@ -22,12 +28,3 @@ requires:
   JSON: 2.53
   Module::Install: 1.10
   Template::Toolkit::Simple: 0.13
-
-devel:
-  git: https://github.com/ingydotnet/module-install-requireslist-pm
-  bug: https://github.com/ingydotnet/module-install-requireslist-pm/issues
-  irc: irc.freenode.net#pkg
-
-=travis:
-  type: perl
-  irc: irc.freenode.net#pkg
