@@ -1,7 +1,7 @@
 =meta: 0.0.2
 
 name: Module-Install-RequiresList
-version: 0.14
+version: 0.15
 abstract: Report prerequisite modules and version numbers
 homepage: https://metacpan.org/release/Module-Install-RequiresList
 language: perl

@@ -1,6 +1,6 @@
 use strict; use warnings;
 package Module::Install::RequiresList;
-our $VERSION = '0.14';
+our $VERSION = '0.15';
 
 use base 'Module::Install::Base';
 
@@ -14,7 +14,7 @@ sub requires_list {
     io('Makefile')->append(<<"...");
 
 requires-list ::
-	\$(PERL) "-Ilib" "-M$pkg" -e "print '$pkg'->_requires_report()"
+\t\$(PERL) "-Ilib" "-M$pkg" -e "print '$pkg'->_requires_report()"
 
 ...
 
